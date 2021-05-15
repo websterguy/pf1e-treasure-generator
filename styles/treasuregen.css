@@ -1,0 +1,52 @@
+.sidebar-tab .directory-footer .genButton {
+    flex-basis: 100%;
+    margin-top: 5px;
+}
+
+.addButton {
+    margin-left: 5px;
+    border: 2px groove #f0f0e0;
+    background: rgba(0, 0, 0, 0.1);
+    font-family: "Signika", sans-serif;
+    border-radius: 3px;
+}
+.addButton:hover{
+    outline: none;
+    box-shadow: 0 0 5px red;
+}
+
+.addButton:disabled {
+    color: #4b4a44; box-shadow: none;
+}
+
+ul li{
+    margin-bottom: .2em;
+}
+
+#customizeButton, #rollButton {
+    width: 350px;
+    height: 40px;
+    text-align: center;
+    /* position: absolute;
+    left: 120px;
+    top: 50%; */
+    /* transform: translate3D(0,-50%,0); */
+    /* z-index: 42 !important; */
+    cursor: pointer;
+    border: 1px solid black;
+    padding: 0;
+}
+
+.generator-case {
+    display: inline-block;
+    background: none;
+    width: 100%;
+    height: 100%;
+    color: black;
+    position: relative;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding-top: 3px;
+    line-height: 1;
+}

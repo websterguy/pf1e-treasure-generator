@@ -1,0 +1,74 @@
+<form class="encounter-dialog flexcol">
+  <div class="form-group">
+    <label for="crSelect">Level</label>
+    <select name="levelSelect">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+      <option value="11">11</option>
+      <option value="12">12</option>
+      <option value="13">13</option>
+      <option value="14">14</option>
+      <option value="15">15</option>
+      <option value="16">16</option>
+      <option value="17">17</option>
+      <option value="18">18</option>
+      <option value="19">19</option>
+      <option value="20">20</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="campaignSpeed">Campaign Speed</label>
+    <select name="campaignSpeed">
+      <option value="medium">Medium</option>
+      <option value="slow">Slow</option>
+      <option value="fast">Fast</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="multiplier">Treasure Value</label>
+    <select name="multiplier">
+      <option value="normal">Normal</option>
+      <option value="incidental">Incidental (1/2)</option>
+      <option value="double">Double</option>
+      <option value="triple">Triple</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="type">Creature Type</label>
+    <select name="type">
+        <option value="ABDE">Aberration</option>
+        <option value="ABDEFGH">Aberration (Cunning)</option>
+        <option value="ABDE">Animal</option>
+        <option value="EF">Construct</option>
+        <option value="EFBCH">Construct (Guarding Treasure)</option>
+        <option value="ABCHI">Dragon</option>
+        <option value="BCDG">Fey</option>
+        <option value="ABDEFG">Humanoid</option>
+        <option value="ABDEFGH">Humanoid (Community)</option>
+        <option value="ABDE">Magical Beast</option>
+        <option value="ABCDEH">Monstrous Humanoid</option>
+        <option value="ABD">Ooze</option>
+        <option value="ABCDEFGHI">Outsider</option>
+        <option value="ABDE">Plant</option>
+        <option value="ABDE">Undead</option>
+        <option value="ABDEFG">Undead (Intelligent)</option>
+        <option value="ABD">Vermin</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <button class="encounter-dialog" id="customizeButton" type="button">
+     <i class="fas fa-check-square"></i> Customize Treasure Types
+    </button>
+    <button class="encounter-dialog" id="rollButton" type="button">
+      <i class="fas fa-dice-d20"></i> Roll Treasure
+    </button>
+  </div>
+</form>
