@@ -1,48 +1,36 @@
 {
-  "name": "module",
-  "title": "New Module",
-  "description": "",
-  "version": "This is auto replaced",
-  "library": "false",
-  "manifestPlusVersion": "1.0.0",
-  "minimumCoreVersion": "0.7.9",
-  "compatibleCoreVersion": "0.7.9",
-  "authors": [
+  "name":"pf1e-treasure-generator",
+  "title":"PF1e UE Treasure Generator",
+  "description":"Adds a treasure generator macro and rolltable compendium",
+  "version":"0.1",
+  "manifestPlusVersion":"1.0.0",
+  "minimumCoreVersion":"0.7.9",
+  "compatibleCoreVersion":"0.7.9",
+  "library":"false",
+  "authors":[
     {
-      "name": "The League of Extraordinary FVTT Developers",
-      "url": "https://github.com/League-of-Foundry-Developers",
-      "discord": "discordID#0001"
+      "name":"websterguy",
+      "url":"https://github.com/websterguy/",
+      "discord":"websterguy#1136"
     }
   ],
-  "dependencies": [
-
-  ],
-  "conflicts": [
-    
-  ],
-  "esmodules": [
-    "/scripts/module.js"
-  ],
-  "scripts": [
-    "/scripts/lib/lib.js"
-  ],
-  "styles": [
-    "/styles/module.css"
-  ],
-  "languages": [
+  "packs":[
     {
-      "lang": "en",
-      "name": "English",
-      "path": "languages/en.json"
+      "name":"macros",
+      "label":"Treasure Generator Macros",
+      "path":"packs/macros.db",
+      "entity":"Macro",
+      "package":"pf1e-treasure-generator"
+    },
+    {
+      "name":"tables",
+      "label":"Treasure Generator Roll Tables",
+      "path":"packs/tables.db",
+      "entity":"RollTable",
+      "package":"pf1e-treasure-generator"
     }
   ],
-  "url": "This is auto replaced",
-  "manifest": "This is auto replaced",
-  "download": "This is auto replaced",
-  "media": [
-    {
-      "type": "icon",
-      "url": "https://avatars2.githubusercontent.com/u/71292812?s=400&u=ccdb4eeb7abf551ca8f314e5a9bfd0479a4d3d41&v=4"
-    }
-  ]
+  "url":"https://github.com/websterguy/pf1e-treasure-generator",
+  "manifest":"This is auto replaced",
+  "download":"This is auto replaced"
 }
