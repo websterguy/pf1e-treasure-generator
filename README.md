@@ -1,53 +1,15 @@
-![](https://img.shields.io/badge/Foundry-v0.7.9-informational)
-<!--- Downloads @ Latest Badge -->
-<!--- replace <user>/<repo> with your username/repository -->
-<!--- ![Latest Release Download Count](https://img.shields.io/github/downloads/<user>/<repo>/latest/module.zip) -->
+# PF1E Treasure Generator for Foundry VTT
 
-<!--- Forge Bazaar Install % Badge -->
-<!--- replace <your-module-name> with the `name` in your manifest -->
-<!--- ![Forge Installs](https://img.shields.io/badge/dynamic/json?label=Forge%20Installs&query=package.installs&suffix=%25&url=https%3A%2F%2Fforge-vtt.com%2Fapi%2Fbazaar%2Fpackage%2F<your-module-name>&colorB=4aa94a) -->
+### Install
+https://github.com/websterguy/pf1e-treasure-generator/releases/latest/download/module.json
 
+### Description
+Treasure Generator macro for the Pathfinder 1e system in Foundry VTT.
 
-# How to use this Template to create a versioned Release
+Follows the Ultimate Equipment treasure generation rules.
 
-1. Open your repository's releases page.
+Allows setting an encounter level, xp track, multiplier, and encounter type to generate a budget and add items from Ultimate Equipment up to that budget.
 
-![Where to click to open repository releases.](https://user-images.githubusercontent.com/7644614/93409301-9fd25080-f864-11ea-9e0c-bdd09e4418e4.png)
-
-2. Click "Draft a new release"
-
-![Draft a new release button.](https://user-images.githubusercontent.com/7644614/93409364-c1333c80-f864-11ea-89f1-abfcb18a8d9f.png)
-
-3. Fill out the release version as the tag name.
-
-## <span color="red">Do not prefix your tag name with a `v`.</span>
-
-If you want to add details at this stage you can, or you can always come back later and edit them.
-
-![Release Creation Form](https://user-images.githubusercontent.com/7644614/93409543-225b1000-f865-11ea-9a19-f1906a724421.png)
-
-4. Hit submit.
-
-5. Wait a few minutes.
-
-A Github Action will run to populate the `module.json` and `module.zip` with the correct urls that you can then use to distribute this release. You can check on its status in the "Actions" tab.
-
-![Actions Tab](https://user-images.githubusercontent.com/7644614/93409820-c1800780-f865-11ea-8c6b-c3792e35e0c8.png)
-
-6. Grab the module.json url from the release's details page.
-
-![image](https://user-images.githubusercontent.com/7644614/93409960-10c63800-f866-11ea-83f6-270cc5d10b71.png)
-
-This `module.json` will only ever point at this release's `module.zip`, making it useful for sharing a specific version for compatibility purposes.
-
-7. You can use the url `https://github.com/<user>/<repo>/releases/latest/download/module.json` to refer to the manifest.
-
-This is the url you want to use to install the module typically, as it will get updated automatically.
-
-
-# FoundryVTT Module
-
-Does something, probably
-
-## Changelog
-
+![image](https://user-images.githubusercontent.com/54455090/112746807-2ed3ca00-8f66-11eb-9a15-ba1d2aa73be3.png)
+![image](https://user-images.githubusercontent.com/54455090/112746850-9a1d9c00-8f66-11eb-8609-5036cbee6f46.png)
+![image](https://user-images.githubusercontent.com/54455090/112746858-a3a70400-8f66-11eb-9326-588a648391ff.png)
