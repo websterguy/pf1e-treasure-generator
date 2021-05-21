@@ -3,6 +3,9 @@
 ### Install
 https://github.com/websterguy/pf1e-treasure-generator/releases/latest/download/module.json
 
+### Usage
+Launch the Generator by clicking the "Generate Treasure" button added to the bottom of the item tab of the sidebar.
+
 ### Description
 Treasure Generator macro for the Pathfinder 1e system in Foundry VTT.
 
