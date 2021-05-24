@@ -4,8 +4,8 @@
   "description":"Adds a treasure generator macro and rolltable compendium",
   "version":"0.3",
   "manifestPlusVersion":"1.0.0",
-  "minimumCoreVersion":"0.7.9",
-  "compatibleCoreVersion":"0.7.9",
+  "minimumCoreVersion":"0.8.5",
+  "compatibleCoreVersion":"0.8.5",
   "library":"false",
   "authors":[
     {
