@@ -328,13 +328,7 @@ const buildSelectors = function(selectedTypes) {
             let selectorList = treasureTypes[index].filter(o => o.value <= budget);
             selectorsMsg += `<div class="form-group fexrow" style="flex: 1"><label>Type ${type} Treasures</label><select name="${type}Select" id="${type}Select" style="flex:15;" ${selectorList.length === 0 ? "disabled": ""}>`;
             selectorsMsg += createOptions(type);
-            /*if (selectorList.length === 0) {
-                selectorsMsg += `<option value="0" disabled>No Options in Budget Range</option>`
-            } else {
-                selectorList.forEach(function(item, index) {
-                    selectorsMsg += `<option value="${index}">${item.value} gp:	${item.rewardText}</option>`;
-                });
-            }*/
+
             selectorsMsg += `</select>
                 <input type="button" class="addButton" style="flex:1;" value="+ Add" name="${type}" id="${type}AddButton" ${selectorList.length === 0 ? "disabled": ""}>
                 </div>`;
@@ -515,9 +509,12 @@ async function tableRoll(event) {
 	//console.log(event);
     buttonClicked.style.background = "red";
 	let tableToRoll = buttonClicked.name;
+    if (tableToRoll === "Weapon") {
+        tableToRoll = "Weapon Type";
+    }
     let masterwork = buttonClicked.parentElement.innerHTML.includes("Masterwork");
 
-    let compendiumTables = await game.packs.get("pf1e-treasure-generator.tables").getContent();
+    let compendiumTables = await game.packs.get("pf1e-treasure-generator.tables").getDocuments();
     let table = await compendiumTables.find(o => o.name === tableToRoll);
     let originalTable = table;
     let result = await table.roll();
@@ -530,7 +527,7 @@ async function tableRoll(event) {
 
     while (resultsQueue.length) {
         let resultSearch = resultsQueue.shift();
-        let tableSearch = await compendiumTables.find(o => o.name === resultSearch.text);
+        let tableSearch = await compendiumTables.find(o => o.name === resultSearch.data.text);
         if (tableSearch) {
             let newResult = await tableSearch.roll();
             for (var i = 0; i < newResult.results.length; i++) {
@@ -548,7 +545,8 @@ async function tableRoll(event) {
     }
 
     if (masterwork) {
-        result.results[0].text = "Masterwork " + result.results[0].text;
+        let updateText = "Masterwork " + result.results[0].data.text;
+        await result.results[0].update({text: updateText});
     }
 
     originalTable.draw(result);
@@ -657,7 +655,6 @@ function calcBudget(html) {
     }
 }
 
-canvas.tokens.selectObjects();
 function runGenerator() {
     let d = new Dialog({
       title: 'Treasure Generator',
