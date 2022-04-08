@@ -2,10 +2,9 @@
   "name":"pf1e-treasure-generator",
   "title":"PF1e UE Treasure Generator",
   "description":"Adds a treasure generator macro and rolltable compendium",
-  "version":"0.3",
-  "manifestPlusVersion":"1.0.0",
-  "minimumCoreVersion":"0.8.5",
-  "compatibleCoreVersion":"0.8.5",
+  "version":"0.5",
+  "minimumCoreVersion":"v9",
+  "compatibleCoreVersion":"v9",
   "library":"false",
   "authors":[
     {
@@ -16,25 +15,18 @@
   ],
   "packs":[
     {
-      "name":"macros",
-      "label":"Treasure Generator Macros",
-      "path":"packs/macros.db",
-      "entity":"Macro",
-      "package":"pf1e-treasure-generator"
-    },
-    {
       "name":"tables",
       "label":"Treasure Generator Roll Tables",
-      "path":"packs/tables.db",
-      "entity":"RollTable",
+      "path":"./packs/tables.db",
+      "type":"RollTable",
       "package":"pf1e-treasure-generator"
     }
   ],
-  "systems": ["pf1"],
+  "system": ["pf1"],
   "esmodules": ["./scripts/generator.js"],
   "styles": ["./styles/treasuregen.css"],
   "templates": ["./templates/encounter.html"],
   "url":"https://github.com/websterguy/pf1e-treasure-generator",
   "manifest":"https://raw.githubusercontent.com/websterguy/pf1e-treasure-generator/main/module.json",
-  "download":"https://github.com/websterguy/pf1e-treasure-generator/releases/download/0.3/module.zip"
+  "download":"https://github.com/websterguy/pf1e-treasure-generator/releases/download/0.5/module.zip"
 }

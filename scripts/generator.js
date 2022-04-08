@@ -381,31 +381,31 @@ let spRolls = "";
 let gpRolls = "";
 let ppRolls = "";
 
-function copperRoll(event) {
+async function copperRoll(event) {
 	let buttonClicked = event.target;
     buttonClicked.style.background = "red";
-	let r = new Roll(cpRolls).roll();
+	let r = await new Roll(cpRolls).evaluate();
 	r.toMessage({flavor: '<h2>Copper Pieces in Treasure:</h2>'});
 }
 
-function silverRoll(event) {
+async function silverRoll(event) {
 	let buttonClicked = event.target;
     buttonClicked.style.background = "red";
-	let r = new Roll(spRolls).roll();
+	let r = await new Roll(spRolls).roll();
 	r.toMessage({flavor: '<h2>Silver Pieces in Treasure:</h2>'});
 }
 
-function goldRoll(event) {
+async function goldRoll(event) {
 	let buttonClicked = event.target;
     buttonClicked.style.background = "red";
-	let r = new Roll(gpRolls).roll();
+	let r = await new Roll(gpRolls).roll();
 	r.toMessage({flavor: '<h2>Gold Pieces in Treasure:</h2>'});
 }
 
-function platRoll(event) {
+async function platRoll(event) {
 	let buttonClicked = event.target;
     buttonClicked.style.background = "red";
-	let r = new Roll(ppRolls).roll();
+	let r = await new Roll(ppRolls).roll();
 	r.toMessage({flavor: '<h2>Platinum Pieces in Treasure:</h2>'});
 }
 
