@@ -1,32 +1,51 @@
 {
-  "name":"pf1e-treasure-generator",
-  "title":"PF1e UE Treasure Generator",
-  "description":"Adds a treasure generator macro and rolltable compendium",
-  "version":"0.5",
-  "minimumCoreVersion":"v9",
-  "compatibleCoreVersion":"v9",
-  "library":"false",
-  "authors":[
-    {
-      "name":"websterguy",
-      "url":"https://github.com/websterguy/",
-      "discord":"websterguy#1136"
-    }
+  "id": "pf1e-treasure-generator",
+  "title": "PF1e UE Treasure Generator",
+  "description": "Adds a treasure generator macro and rolltable compendium",
+  "version": "0.5",
+  "library": "false",
+  "authors": [
+      {
+          "name": "websterguy",
+          "url": "https://github.com/websterguy/",
+          "discord": "websterguy#1136"
+      }
   ],
-  "packs":[
-    {
-      "name":"tables",
-      "label":"Treasure Generator Roll Tables",
-      "path":"./packs/tables.db",
-      "type":"RollTable",
-      "package":"pf1e-treasure-generator"
-    }
+  "packs": [
+      {
+          "name": "tables",
+          "label": "Treasure Generator Roll Tables",
+          "path": "./packs/tables.db",
+          "type": "RollTable",
+          "package": "pf1e-treasure-generator"
+      }
   ],
-  "system": ["pf1"],
-  "esmodules": ["./scripts/generator.js"],
-  "styles": ["./styles/treasuregen.css"],
-  "templates": ["./templates/encounter.html"],
-  "url":"https://github.com/websterguy/pf1e-treasure-generator",
-  "manifest":"https://raw.githubusercontent.com/websterguy/pf1e-treasure-generator/main/module.json",
-  "download":"https://github.com/websterguy/pf1e-treasure-generator/releases/download/0.5/module.zip"
+  "relationships": {
+    "systems": [
+      {
+        "id": "pf1",
+        "type": "system",
+        "compatibility": {
+          "minimum": "0.82.5",
+          "verified": "0.82.5"
+        }
+      }
+    ]
+  },
+  "compatibility": {
+    "minimum": "10.291",
+    "verified": "10.291"
+  },
+  "esmodules": [
+      "./scripts/generator.js"
+  ],
+  "styles": [
+      "./styles/treasuregen.css"
+  ],
+  "templates": [
+      "./templates/encounter.html"
+  ],
+  "url": "https://github.com/websterguy/pf1e-treasure-generator",
+  "manifest": "https://github.com/websterguy/pf1e-treasure-generator/releases/latest/download/module.json",
+  "download": "https://github.com/websterguy/pf1e-treasure-generator/releases/download/0.5/module.zip"
 }

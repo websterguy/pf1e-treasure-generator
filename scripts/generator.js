@@ -527,7 +527,7 @@ async function tableRoll(event) {
 
     while (resultsQueue.length) {
         let resultSearch = resultsQueue.shift();
-        let tableSearch = await compendiumTables.find(o => o.name === resultSearch.data.text);
+        let tableSearch = await compendiumTables.find(o => o.name === resultSearch.text);
         if (tableSearch) {
             let newResult = await tableSearch.roll();
             for (var i = 0; i < newResult.results.length; i++) {
@@ -545,7 +545,7 @@ async function tableRoll(event) {
     }
 
     if (masterwork) {
-        let updateText = "Masterwork " + result.results[0].data.text;
+        let updateText = "Masterwork " + result.results[0].text;
         await result.results[0].update({text: updateText});
     }
 
