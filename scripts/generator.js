@@ -531,11 +531,11 @@ async function tableRoll(event) {
         if (tableSearch) {
             let newResult = await tableSearch.roll();
             for (var i = 0; i < newResult.results.length; i++) {
-                resultsQueue.push(newResult.results[i]);
+                resultsQueue.push(duplicate(newResult.results[i]));
             }
         }
         else {
-            drawResults.push(resultSearch);
+            drawResults.push(duplicate(resultSearch));
         }
     }
 
