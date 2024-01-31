@@ -25,14 +25,14 @@
             "id": "pf1",
             "type": "system",
             "compatibility": {
-              "minimum": "9.0",
+              "minimum": "0.82.5",
               "verified": "9.0"
             }
           }
       ]
   },
   "compatibility": {
-    "minimum": "11",
+    "minimum": "10.291",
     "verified": "11.306"
   },
   "esmodules": [
