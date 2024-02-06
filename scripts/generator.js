@@ -531,11 +531,11 @@ async function tableRoll(event) {
         if (tableSearch) {
             let newResult = await tableSearch.roll();
             for (var i = 0; i < newResult.results.length; i++) {
-                resultsQueue.push(duplicate(newResult.results[i]));
+                resultsQueue.push(newResult.results[i]);
             }
         }
         else {
-            drawResults.push(duplicate(resultSearch));
+            drawResults.push(resultSearch);
         }
     }
 
@@ -544,12 +544,12 @@ async function tableRoll(event) {
         result.results.push(drawResults[i]);
     }
 
+    let message = await originalTable.toMessage(result.results, {roll: result.roll});
     if (masterwork) {
-        let updateText = "Masterwork " + result.results[0].text;
-        await result.results[0].update({text: updateText});
+        let expression = new RegExp(result.results[0].text);
+        let newMessageContent = message.content.replace(expression, 'Masterwork ' + result.results[0].text);
+        await message.update({content: newMessageContent});
     }
-
-    originalTable.draw(result);
 }
 
 function addTreasure(event) {
