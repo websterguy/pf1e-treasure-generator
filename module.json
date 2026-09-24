@@ -2,7 +2,7 @@
   "id": "pf1e-treasure-generator",
   "title": "PF1e UE Treasure Generator",
   "description": "Adds a treasure generator macro and rolltable compendium",
-  "version": "0.7",
+  "version": "0.9",
   "authors": [
       {
           "name": "websterguy",
@@ -25,15 +25,15 @@
             "id": "pf1",
             "type": "system",
             "compatibility": {
-              "minimum": "0.82.5",
-              "verified": "9.0"
+              "minimum": "11",
+              "verified": "11.11"
             }
           }
       ]
   },
   "compatibility": {
-    "minimum": "10.291",
-    "verified": "11.306"
+    "minimum": "13",
+    "verified": "13.351"
   },
   "esmodules": [
       "./scripts/generator.js"
