@@ -8,15 +8,23 @@ export class treasureGenerator {
     }
 }
 
-// Render the sbcButton when the actorDirectory is visible
 Hooks.on("renderItemDirectory", (app, html, data) => {
-    //sbcConfig.options.debug && sbcUtils.log("Rendering sbc button")
-    const startGenButton = $("<button id='startGenButton' class='create-entity genButton'><i class='fas fa-coins'></i> Generate Treasure</button>");
-    html.find(".directory-footer").append(startGenButton);
-     startGenButton.click(async (ev) => {
-         runGenerator();
-     });
-
+    const footer = html.querySelector('.directory-footer');
+	const section = document.createElement('section');
+	footer.append(section);
+	section.classList.add('treasure-generator', 'button-div');
+	
+	const startGenButton = document.createElement('button');
+	startGenButton.type = 'button';
+	startGenButton.classList.add('create-entity', 'genButton');
+	startGenButton.id = 'startGenButton';
+	section.append(startGenButton);
+	startGenButton.addEventListener('click', runGenerator);
+    const icon = document.createElement('i');
+    icon.classList.add('fas', 'fa-coins');
+    startGenButton.appendChild(icon);
+    const innerText = document.createTextNode('Generate Treasure');
+    startGenButton.appendChild(innerText);
 });
 
 let typeATreasure = [
