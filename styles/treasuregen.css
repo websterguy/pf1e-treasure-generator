@@ -1,3 +1,7 @@
+.treasure-generator.button-div {
+    display: flex;
+}
+
 .sidebar-tab .directory-footer .genButton {
     flex-basis: 100%;
     margin-top: 5px;
